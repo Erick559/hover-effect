@@ -5,7 +5,6 @@
     padding:0;
     font-family: 'Poppins',sans-serif;
     box-sizing: border-box;
-    font-size: 10px;
 }
 
 
@@ -26,7 +25,7 @@ body{
     transition: 0.5s;
 }
 
-.circle{
+.card .circle{
     position:absolute;
     top:0;
     left:0;
@@ -37,7 +36,7 @@ body{
 
 }
 
-.circle::before{
+.card .circle::before{
     content:'';
     position:absolute;
     top:0;
@@ -48,8 +47,7 @@ body{
     clip-path: circle(120px at center);
     transition: 0.5s;
 }
-
-.circle:hover:before{
+.card:hover .circle:before{
     clip-path: circle(400px at center);
     background-color:#0065c3;
 
@@ -69,6 +67,23 @@ img{
     left:72%;
     height:500px;
 }
+
+.card .content{
+    position: relative;
+    width:50%;
+    left:9%;
+    padding: 20px 20px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card:hover .content{
+    left:0;
+    opacity: 1;
+    visibility: visible;
+}
+
 
 
 
