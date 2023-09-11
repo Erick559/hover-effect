@@ -18,7 +18,6 @@ body{
 
 .card{
     position:relative;
-    background-color: #ccc;
     width:600px;
     height:350px;
     border-radius: 20px;
@@ -33,5 +32,21 @@ body{
     left:0;
     width:100%;
     height:100%;
+    border-radius: 20px;
+    overflow: hidden;
+
 }
+
+.circle::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: red;
+    clip-path: circle(120px at center);
+}
+
+
 
