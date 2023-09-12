@@ -64,7 +64,7 @@ img{
 }
 
 .card:hover img{
-    left:72%;
+    left:76%;
     height:500px;
 }
 
@@ -72,10 +72,14 @@ img{
     position: relative;
     width:50%;
     left:9%;
-    padding: 20px 20px 20px;
-    transition: 0.5s;
+    padding: 20px 20px 20px 40px;
+    transition: 0.2s;
     opacity: 0;
     visibility: hidden;
+}
+
+.card .content h2{
+    font-weight: 700;
 }
 
 .card:hover .content{
@@ -84,6 +88,49 @@ img{
     visibility: visible;
 }
 
+.card .content a{
+    position: relative;
+    text-decoration: none;
+    color:black;
+    background-color: #fff;
+    border-radius: 10px;
+    padding:10px 20px;
+    margin-top: 10px;
+    display: inline-block;
+    font-weight: 700;
+
+}
+
+@media (max-width:650px) {
+    .card{
+        width:auto;
+        max-width: 350px;
+        align-items: flex-start;
+        margin:10px;
+    }
+
+    .card:hover{
+        height:650px;
+    }
+
+    .card .content{
+        width:100%;
+        left:0;
+        padding:30px;
+    }
+
+    .card:hover img{
+        height:300px;
+        top:76%;
+        left:50%;
+    }
+}
+
+@media (max-width:420px){
+    .card .content{
+        padding:30px;
+    }
+}
 
 
 
